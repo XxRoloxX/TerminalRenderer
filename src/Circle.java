@@ -23,12 +23,20 @@ public class Circle extends Shape {
     @Override
     public void draw() {
         Point[] boundingBox = getBoundingBox();
-        Point middle = new Point((position.getX() +radius), (int) (position.getY() + radius));
+        Point middle = new Point((position.getX() +radius), (position.getY() + radius));
+        System.out.print("Middle: ");
+        System.out.println(middle);
+        System.out.print("Position: ");
+        System.out.println(position);
+        for(int i=0;i<boundingBox.length;i++){
+            System.out.println(boundingBox[i]);
+        }
+
         for(int i=boundingBox[0].getY();i<=boundingBox[2].getY();i++) {
             for (int j = boundingBox[0].getX(); j <= boundingBox[1].getX(); j++) {
 
-                if (getFilled() == true && GeometryUtils.distanceBetweenCoordinates(i,j, middle.getX(), middle.getY())<=radius
-                        || Math.abs(GeometryUtils.distanceBetweenCoordinates(i,j, middle.getX(), middle.getY())-radius) < precision) {
+                if (getFilled() == true && Math.abs(GeometryUtils.distanceBetweenCoordinates(j,i, middle.getX(), middle.getY()))<=radius
+                        || Math.abs(GeometryUtils.distanceBetweenCoordinates(j,i, middle.getX(), middle.getY())-radius) < precision) {
                     if(isInsideScene(j,i)){
                         sceneField[i][j] = charToDraw;
                     }

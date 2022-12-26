@@ -78,6 +78,11 @@ public class Segment extends Primitive{
         return GeometryUtils.getBoundingBoxAroundPoints(points);
 
     }
+    public void translate(Point o){
+        super.translate(o);
+        start.translate(o);
+        end.translate(o);
+    }
 
     @Override
     public void draw() {

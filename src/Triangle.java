@@ -1,3 +1,5 @@
+import jdk.jfr.Description;
+
 import java.util.ArrayList;
 
 public class Triangle extends Shape {
@@ -22,6 +24,12 @@ public class Triangle extends Shape {
         this.position = points[0];
 
     }
+    public void translate(Point o){
+        super.translate(o);
+        p1.translate(o);
+        p2.translate(o);
+        p3.translate(o);
+    }
 
     @Override
     public Point[] getBoundingBox() {
@@ -31,7 +39,8 @@ public class Triangle extends Shape {
         points[2] = new Point(p3);
         return GeometryUtils.getBoundingBoxAroundPoints(points);
     }
-    public boolean isPointInsideTriangle(Point pOther){
+    @Description("Returns 1 if point is in triangle, 0 if point is on edge, and -1 if point is outside the triangle")
+    public int isPointInsideTriangle(Point pOther){
 
         Triangle triangle1 = new Triangle(false,p1,p2,pOther);
         Triangle triangle2 = new Triangle(false,p1,p3,pOther);
@@ -39,12 +48,21 @@ public class Triangle extends Shape {
 
         double areaSum = triangle1.triangleArea() + triangle2.triangleArea() + triangle3.triangleArea();
         double totalArea = triangleArea();
-        return areaSum==totalArea;
+        double areaPrecision = precision*totalArea;
+
+        if(Math.abs(totalArea-areaSum)>areaPrecision){
+            return -1;
+        }else if(triangle1.triangleArea()<areaPrecision || triangle2.triangleArea()<areaPrecision || triangle3.triangleArea()<areaPrecision){
+            return 0;
+        }else{
+            return 1;
+        }
+
     }
     public double triangleArea(){
         Point vecP2P1 = GeometryUtils.subtract(p2,p1);
         Point vecP3P1 = GeometryUtils.subtract(p3,p1);
-        return Math.abs(GeometryUtils.crossProduct(vecP2P1,vecP3P1))/2;
+        return Math.abs(GeometryUtils.crossProduct(vecP2P1,vecP3P1));
     }
 
     @Override
@@ -56,7 +74,7 @@ public class Triangle extends Shape {
         for(int i=boundingBox[0].getY();i<boundingBox[2].getY();i++){
             for(int j=boundingBox[0].getX();j<boundingBox[3].getX();j++){
 
-                if(isInsideScene(j,i) && isPointInsideTriangle(new Point(j,i))){
+                if(isInsideScene(j,i) && (isPointInsideTriangle(new Point(j,i))>=0 && filled || isPointInsideTriangle(new Point(j,i))==0)){
                     sceneField[i][j]=charToDraw;
                 }
             }

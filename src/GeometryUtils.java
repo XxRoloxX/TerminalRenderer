@@ -49,7 +49,7 @@ public class GeometryUtils {
     public static Point multiply(Point p1, double multiplicator){
         Point result = new Point(p1);
         result.multiply(multiplicator);
-        result.multiply(multiplicator);
+        //result.multiply(multiplicator);
         return result;
     }
     public static Point subtract(Point p1, Point p2){
