@@ -80,6 +80,18 @@ public class Triangle extends Shape {
             }
         }
 
+
+        /*
+        for(int i=0;i<sceneHeight;i++){
+            for(int j=0;j<sceneWidth;j++){
+
+                if(isInsideScene(j,i) && (isPointInsideTriangle(new Point(j,i))>=0 && filled || isPointInsideTriangle(new Point(j,i))==0)){
+                    sceneField[i][j]=charToDraw;
+                }
+            }
+        }
+        */
+
     }
 
     public Point getP1() {

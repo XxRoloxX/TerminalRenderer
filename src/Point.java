@@ -1,3 +1,5 @@
+import javax.print.attribute.standard.MediaSize;
+
 public class Point implements Comparable<Point>{
 
     public Point(int x, int y){
@@ -16,11 +18,11 @@ public class Point implements Comparable<Point>{
         this.x = this.x+p.x;
         this.y = this.y+p.y;
     }
-    private int x;
-    private int y;
+    protected double x;
+    protected double y;
 
     public int getX() {
-        return x;
+        return (int)Math.round(x);
     }
 
     public void setX(int x) {
@@ -28,7 +30,7 @@ public class Point implements Comparable<Point>{
     }
 
     public int getY() {
-        return y;
+        return(int)Math.round(y);
     }
 
     public void setY(int y) {
@@ -92,4 +94,39 @@ public class Point implements Comparable<Point>{
     public String toString(){
         return "("+x+","+y+")";
     }
+    /*
+    public void rotateX(double angle){
+
+        double previousRadius = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+        double newRadius;
+        double factor;
+
+        x = x*Math.cos(angle) -y*Math.sin(angle);
+        y = x*Math.sin(angle) + y*Math.cos(angle);
+        //System.out.println(this);
+        newRadius = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+
+        factor = previousRadius/newRadius;
+
+        x*=(factor);
+        y*=(factor);
+    }
+    */
+
+    public double radius(){
+        return Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+    }
+    @Override
+    public boolean equals(Object other){
+        if(other instanceof Point){
+            Point cpy = (Point)other;
+            if(x==cpy.x && y==cpy.y){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
 }

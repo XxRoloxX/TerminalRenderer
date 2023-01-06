@@ -101,7 +101,7 @@ public class Segment extends Primitive{
             for (int i = boundingBox[0].getY(); i <= boundingBox[2].getY(); i++) {
                 for (int j = boundingBox[0].getX(); j <= boundingBox[1].getX(); j++) {
 
-                    if (Math.abs(a * i + b - j) < precision) {
+                    if (Math.abs(a * j + b - i) < precision) {
                         if(isInsideScene(j,i)){
                             sceneField[i][j] = charToDraw;
                         }

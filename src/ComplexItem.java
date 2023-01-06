@@ -61,6 +61,17 @@ public class ComplexItem extends Item {
 
         return boundingBox;
     }
+    public void setScene(char[][] sceneField, int sceneHeight, int sceneWidth){
+
+        this.sceneField = sceneField;
+        this.sceneHeight = sceneHeight;
+        this.sceneWidth = sceneWidth;
+
+        for(int i=0;i<children.size();i++){
+            children.get(i).setScene(sceneField,sceneHeight,sceneWidth);
+        }
+
+    }
 
     @Override
     public void draw() {

@@ -27,7 +27,7 @@ public class GeometryUtils {
             if(points[i].getY()<top){
                 top = points[i].getY();
             }
-            if(points[i].getX()>bottom){
+            if(points[i].getY()>bottom){
                 bottom = points[i].getY();
             }
 

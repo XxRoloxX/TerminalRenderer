@@ -24,7 +24,7 @@ public class Scene {
     }
 
     public void addItem(Item newItem){
-        newItem.setScene(sceneField,width,height);
+        newItem.setScene(sceneField,height,width);
         items.add(newItem);
     }
 
@@ -32,6 +32,7 @@ public class Scene {
         for(int i=0;i<height;i++){
             for(int j=0;j<width;j++){
                 System.out.print(sceneField[i][j]);
+                System.out.print("  ");
             }
             System.out.println();
         }
@@ -46,6 +47,20 @@ public class Scene {
         }
 
         printScene();
+    }
+    public void clearScene(){
+        for(int i=0;i<height;i++){
+            for(int j=0;j<width;j++){
+                sceneField[i][j]=' ';
+            }
+        }
+    }
+    public void emptyScene(){
+        items = new ArrayList<Item>();
+    }
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 
 

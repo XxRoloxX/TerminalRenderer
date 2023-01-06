@@ -24,10 +24,13 @@ public class Circle extends Shape {
     public void draw() {
         Point[] boundingBox = getBoundingBox();
         Point middle = new Point((position.getX() +radius), (position.getY() + radius));
+        /*
         System.out.print("Middle: ");
         System.out.println(middle);
         System.out.print("Position: ");
         System.out.println(position);
+
+         */
         for(int i=0;i<boundingBox.length;i++){
             System.out.println(boundingBox[i]);
         }

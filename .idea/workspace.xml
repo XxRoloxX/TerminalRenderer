@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ImageToASCII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ImageToASCIITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VideoToASCIITest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cube.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Point3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Point3DSpheric.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bezier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bezier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComplexItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeometryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeometryUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageToASCII.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageToASCIITest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Segment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoToASCII.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoToASCIITest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +60,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/wieslaw/Kursy/ParadygmatyProgramowaniaLaboratoria/ParadygmatyProgramowaniaLista8/ParadygmatyProgramowaniaLaboratoriaLista8&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -80,6 +86,15 @@
       <workItem from="1672044963063" duration="11468000" />
       <workItem from="1672061492108" duration="7873000" />
       <workItem from="1672076795642" duration="138000" />
+      <workItem from="1672434084441" duration="12594000" />
+      <workItem from="1672477550444" duration="5202000" />
+      <workItem from="1672520510405" duration="2109000" />
+      <workItem from="1672593351306" duration="2480000" />
+      <workItem from="1672599860358" duration="10832000" />
+      <workItem from="1672613984618" duration="4508000" />
+      <workItem from="1672621304891" duration="8325000" />
+      <workItem from="1672775373495" duration="5699000" />
+      <workItem from="1673027765609" duration="911000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle">
       <created>1672048275059</created>
@@ -105,6 +120,15 @@
           <url>file://$PROJECT_DIR$/src/ImageToASCII.java</url>
           <line>37</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Cube.java</url>
+          <line>64</line>
+          <properties class="Cube" method="updateRotation">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
