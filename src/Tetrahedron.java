@@ -128,7 +128,7 @@ public class Tetrahedron extends Shape{
 
     }
     private boolean isPointOnSurface(Point3D point){
-
+        return false;
     }
 
 

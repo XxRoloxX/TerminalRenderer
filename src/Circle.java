@@ -55,4 +55,8 @@ public class Circle extends Shape {
     public void setRadius(int radius) {
         this.radius = radius;
     }
+
+    public void translate(Point o){
+        position.translate(o);
+    }
 }

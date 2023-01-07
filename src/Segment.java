@@ -79,7 +79,7 @@ public class Segment extends Primitive{
 
     }
     public void translate(Point o){
-        super.translate(o);
+        position.translate(o);
         start.translate(o);
         end.translate(o);
     }

@@ -55,4 +55,8 @@ public class Rect extends Shape {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public void translate(Point o){
+        position.translate(o);
+    }
 }

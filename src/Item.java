@@ -60,9 +60,7 @@ public abstract class Item implements Comparable<Item> {
     public void setPosition(Point p){
         position = new Point(p);
     }
-    public void translate(Point p){
-        position.translate(p);
-    }
+    public abstract void translate(Point p);
     public abstract Point[] getBoundingBox();
     public abstract void draw();
 

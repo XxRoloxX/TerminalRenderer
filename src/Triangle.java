@@ -25,7 +25,7 @@ public class Triangle extends Shape {
 
     }
     public void translate(Point o){
-        super.translate(o);
+        position.translate(o);
         p1.translate(o);
         p2.translate(o);
         p3.translate(o);

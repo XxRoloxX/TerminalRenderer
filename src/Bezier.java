@@ -24,7 +24,7 @@ public class Bezier extends Primitive{
         return GeometryUtils.getBoundingBoxAroundPoints(points);
     }
     public void translate(Point o){
-        super.translate(o);
+        position.translate(o);
         for(int i=0;i<points.length;i++){
             points[i].translate(o);
         }

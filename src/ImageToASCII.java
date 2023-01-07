@@ -121,5 +121,9 @@ public class ImageToASCII extends Item {
         return height;
     }
 
+    public void translate(Point o){
+        position.translate(o);
+    }
+
 
 }

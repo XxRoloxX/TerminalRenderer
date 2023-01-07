@@ -130,11 +130,14 @@ public class Cube extends Shape{
     }
 
  */
-    public void translate(Point p){
+    public void translateAllPoints(Point p){
         for(int i=0;i<points.length;i++){
             if(points[i]!=null)
                 points[i].translate(p);
         }
+    }
+    public void translate(Point p){
+        position.translate(p);
     }
 
     private void createFilledCube(){
@@ -212,9 +215,9 @@ public class Cube extends Shape{
 
     @Override
     public Point[] getBoundingBox() {
-        translate(GeometryUtils.subtract(normalizedPosition,position));
+        translateAllPoints(GeometryUtils.subtract(normalizedPosition,position));
         Point[] result = GeometryUtils.getBoundingBoxAroundPoints(points);
-        translate(GeometryUtils.subtract(position,normalizedPosition));
+        translateAllPoints(GeometryUtils.subtract(position,normalizedPosition));
         return result;
     }
 
@@ -222,13 +225,13 @@ public class Cube extends Shape{
     @Override
     public void draw() {
 
-        translate(GeometryUtils.subtract(normalizedPosition,position));
+        translateAllPoints(GeometryUtils.subtract(normalizedPosition,position));
         for(int i=0;i<points.length;i++){
             if(points[i]!=null && isInsideScene(points[i].getX(), points[i].getY())){
                 sceneField[points[i].getY()][points[i].getX()]=points[i].charToDraw;
             }
         }
-        translate(GeometryUtils.subtract(position,normalizedPosition));
+        translateAllPoints(GeometryUtils.subtract(position,normalizedPosition));
 
     }
 

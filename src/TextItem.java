@@ -84,4 +84,7 @@ public class TextItem extends Item {
         }
 
     }
+    public void translate(Point p){
+        position.translate(p);
+    }
 }
