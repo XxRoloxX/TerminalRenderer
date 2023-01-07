@@ -67,15 +67,11 @@ public class Main {
 
         scene.draw();
     }
-    public void cubeTest(){
-
-    }
-    public static void main(String[] args) throws InterruptedException {
-
+    public void cubeTest()throws InterruptedException{
         Scene scene = new Scene(200,200);
         Item cube = new Cube(true, new Point(100,100),70);
         scene.addItem(cube);
-        double rot=0.2;
+        double rot=0.05;
         double sum =0.1;
         while(true){
             System.out.println(sum);
@@ -86,12 +82,36 @@ public class Main {
             Scene.clearScreen();
             scene.draw();
             sum+=0.1;
-            Thread.sleep(200);
+            Thread.sleep(100);
         }
 
+    }
+    public static void main(String[] args) throws InterruptedException {
+        Cube cube3 = new Cube(true, new Point(150,50),30);
+        Cube cube2 = new Cube(true, new Point(100,100),50);
+        Cube cube1 = new Cube(true, new Point(50,50),30);
 
 
+        AnimatedScene animatedScene = new AnimatedScene(300,300);
 
+        CubeAnimation cube1Animation = new CubeAnimation(cube1,2);
+        CubeAnimation cube2Animation = new CubeAnimation(cube2,2);
+        CubeAnimation cube3Animation = new CubeAnimation(cube3,2);
+
+        cube1Animation.setRotationAngles(0.1,0.1,0.1);
+        cube2Animation.setRotationAngles(-0.1,0.1,0.1);
+        cube3Animation.setRotationAngles(-0.1,0.1,-0.1);
+
+        VideoToASCII videoBackground = new VideoToASCII();
+        videoBackground.loadVideo("/home/wieslaw/Videos/simplescreenrecorder-2022-12-27_16.57.50.mp4");
+
+
+        animatedScene.addVideo(videoBackground);
+        animatedScene.addVideo(cube1Animation);
+        animatedScene.addVideo(cube2Animation);
+        animatedScene.addVideo(cube3Animation);
+
+        animatedScene.drawFrames();
 
 
     }

@@ -9,7 +9,7 @@ public class Cube extends Shape{
     private double rotationZ;
     private Point3D[] points;
 
-    private Point3D[] rotatedPoints;
+    //private Point3D[] rotatedPoints;
 
     private Point normalizedPosition;
 
@@ -39,29 +39,52 @@ public class Cube extends Shape{
     }
 
     public void rotatePointsOnXAxis(double angle){
+        /*
         rotationX+=angle;
         if(rotationX>=2*Math.PI){
             rotationX=rotationX-2*Math.PI;
         }
         updateRotation();
+        */
+
+        for(int i=0;i<points.length;i++){
+            if(points[i]!=null)
+            points[i].rotateX(angle);
+        }
+
+
     }
     public void rotatePointsOnYAxis(double angle){
+        /*
         rotationY+=angle;
         if(rotationY>=2*Math.PI){
             rotationY=rotationY-2*Math.PI;
         }
         updateRotation();
+        */
+
+        for(int i=0;i<points.length;i++){
+            if(points[i]!=null)
+            points[i].rotateY(angle);
+        }
     }
     public void rotatePointsOnZAxis(double angle){
+        /*
         rotationZ+=angle;
         if(rotationZ>=2*Math.PI){
             rotationZ=rotationZ-2*Math.PI;
         }
         updateRotation();
+        */
+
+        for(int i=0;i<points.length;i++){
+            if(points[i]!=null)
+            points[i].rotateZ(angle);
+        }
     }
 
 
-
+/*
     public void updateRotation(){
         double halfPI = Math.PI/2;
         System.out.println(halfPI);
@@ -105,17 +128,19 @@ public class Cube extends Shape{
 
         }
     }
+
+ */
     public void translate(Point p){
-        for(int i=0;i<rotatedPoints.length;i++){
-            if(rotatedPoints[i]!=null)
-                rotatedPoints[i].translate(p);
+        for(int i=0;i<points.length;i++){
+            if(points[i]!=null)
+                points[i].translate(p);
         }
     }
 
     private void createFilledCube(){
 
         points=new Point3D[width*width*6];
-        rotatedPoints = new Point3D[width*width*6];
+
         int iter=0;
 
         for(int i=normalizedPosition.getX();i<-normalizedPosition.getX();i++){
@@ -145,7 +170,6 @@ public class Cube extends Shape{
 
         int iter=0;
         points = new Point3D[12*width];
-        rotatedPoints = new Point3D[12*width];
 
         for(int i=normalizedPosition.getX();i<-normalizedPosition.getX();i++){
             for(int j=normalizedPosition.getY();j<-normalizedPosition.getX();j++){
@@ -188,7 +212,8 @@ public class Cube extends Shape{
 
     @Override
     public Point[] getBoundingBox() {
-        return new Point[0];
+
+        return GeometryUtils.getBoundingBoxAroundPoints(points);
     }
 
 
@@ -196,9 +221,9 @@ public class Cube extends Shape{
     public void draw() {
 
         translate(GeometryUtils.subtract(normalizedPosition,position));
-        for(int i=0;i<rotatedPoints.length;i++){
-            if(rotatedPoints[i]!=null && isInsideScene(rotatedPoints[i].getX(), rotatedPoints[i].getY())){
-                sceneField[rotatedPoints[i].getY()][rotatedPoints[i].getX()]=rotatedPoints[i].charToDraw;
+        for(int i=0;i<points.length;i++){
+            if(points[i]!=null && isInsideScene(points[i].getX(), points[i].getY())){
+                sceneField[points[i].getY()][points[i].getX()]=points[i].charToDraw;
             }
         }
         translate(GeometryUtils.subtract(position,normalizedPosition));

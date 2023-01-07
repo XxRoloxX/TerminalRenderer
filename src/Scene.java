@@ -27,8 +27,14 @@ public class Scene {
         newItem.setScene(sceneField,height,width);
         items.add(newItem);
     }
+    public void removeItem(Item item){
+        items.remove(item);
+    }
 
     public void printScene(){
+
+        StringBuilder result = new StringBuilder();
+        /*
         for(int i=0;i<height;i++){
             for(int j=0;j<width;j++){
                 System.out.print(sceneField[i][j]);
@@ -36,6 +42,17 @@ public class Scene {
             }
             System.out.println();
         }
+
+         */
+
+        for(int i=0;i<height;i++){
+            for(int j=0;j<width;j++){
+               result.append(sceneField[i][j]);
+               result.append("  ");
+            }
+           result.append('\n');
+        }
+        System.out.println(result);
     }
 
     public void draw(){
