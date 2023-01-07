@@ -212,8 +212,10 @@ public class Cube extends Shape{
 
     @Override
     public Point[] getBoundingBox() {
-
-        return GeometryUtils.getBoundingBoxAroundPoints(points);
+        translate(GeometryUtils.subtract(normalizedPosition,position));
+        Point[] result = GeometryUtils.getBoundingBoxAroundPoints(points);
+        translate(GeometryUtils.subtract(position,normalizedPosition));
+        return result;
     }
 
 

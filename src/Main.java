@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Main {
 
-    public void christmasCard(){
-        Scene scene = new Scene(400,400);
+    public static void christmasCard(){
+        Scene scene = new Scene(400,300);
         Item segment = new Segment(new Point(50,50),new Point(100,100));
         ///segment.setPrecision(2);
         Item circle = new Circle(false,new Point(200,30),30);
@@ -67,7 +67,7 @@ public class Main {
 
         scene.draw();
     }
-    public void cubeTest()throws InterruptedException{
+    public static void cubeTest()throws InterruptedException{
         Scene scene = new Scene(200,200);
         Item cube = new Cube(true, new Point(100,100),70);
         scene.addItem(cube);
@@ -86,7 +86,7 @@ public class Main {
         }
 
     }
-    public static void main(String[] args) throws InterruptedException {
+    public static  void animationTest()throws InterruptedException{
         Cube cube3 = new Cube(true, new Point(150,50),30);
         Cube cube2 = new Cube(true, new Point(100,100),50);
         Cube cube1 = new Cube(true, new Point(50,50),30);
@@ -97,6 +97,12 @@ public class Main {
         CubeAnimation cube1Animation = new CubeAnimation(cube1,2);
         CubeAnimation cube2Animation = new CubeAnimation(cube2,2);
         CubeAnimation cube3Animation = new CubeAnimation(cube3,2);
+        CubeTranslation cube4Animation = new CubeTranslation(cube3,2);
+        CubeTranslation cube5Animation = new CubeTranslation(new Point(-1,1),cube2,2);
+        CubeTranslation cube6Animation = new CubeTranslation(new Point(-1,-1),cube1,2);
+
+
+
 
         cube1Animation.setRotationAngles(0.1,0.1,0.1);
         cube2Animation.setRotationAngles(-0.1,0.1,0.1);
@@ -110,9 +116,17 @@ public class Main {
         animatedScene.addVideo(cube1Animation);
         animatedScene.addVideo(cube2Animation);
         animatedScene.addVideo(cube3Animation);
+        animatedScene.addVideo(cube4Animation);
+        animatedScene.addVideo(cube5Animation);
+        animatedScene.addVideo(cube6Animation);
+
 
         animatedScene.drawFrames();
 
+    }
+    public static void main(String[] args) throws InterruptedException {
+
+        animationTest();
 
     }
 }

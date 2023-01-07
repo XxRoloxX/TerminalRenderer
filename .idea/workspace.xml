@@ -5,35 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AnimatedScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CubeAnimation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ImageToASCII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ImageToASCIITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ObjectAnimation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VideoToASCIITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Bezier.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Circle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/ComplexItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Cube.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/GeometryUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Item.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/ItemOutOfScene.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Point.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Point3D.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Primitive.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Rect.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Scene.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Segment.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Shape.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/TextItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nvimCoding/Triangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ComplexAnimation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CubeTranslation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tetrahedron.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bezier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bezier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeometryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeometryUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point3D.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,20 +54,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/wieslaw/Kursy/ParadygmatyProgramowaniaLaboratoria/ParadygmatyProgramowaniaLista8/ParadygmatyProgramowaniaLaboratoriaLista8",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/wieslaw/Kursy/ParadygmatyProgramowaniaLaboratoria/ParadygmatyProgramowaniaLista8/ParadygmatyProgramowaniaLaboratoriaLista8&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -113,7 +94,8 @@
       <workItem from="1672621304891" duration="8325000" />
       <workItem from="1672775373495" duration="5699000" />
       <workItem from="1673027765609" duration="7703000" />
-      <workItem from="1673089526600" duration="17248000" />
+      <workItem from="1673089526600" duration="19809000" />
+      <workItem from="1673112818696" duration="6563000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle">
       <created>1672048275059</created>
@@ -129,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673031625630</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Animation of 3D objects, and added support for videos">
+      <created>1673108035329</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673108035329</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,18 +150,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Triangle" />
     <MESSAGE value="Cube" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cube" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Animation of 3D objects, and added support for videos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Animation of 3D objects, and added support for videos" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

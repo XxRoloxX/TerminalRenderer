@@ -3,12 +3,19 @@
 public class Bezier extends Primitive{
 
     Point[] points;
+    double[] coefficients;
 
     public Bezier(Point[] points){
 
         this.points = points;
 
         this.position=GeometryUtils.getBoundingBoxAroundPoints(points)[0];
+
+        coefficients = new double[points.length];
+    }
+
+    private void calculateCoefficients(){
+
     }
     
     @Override
@@ -24,6 +31,18 @@ public class Bezier extends Primitive{
     }
 
     Point bezierCurve(double t){
+        Point resultPoint = new Point();
+
+        for(int i=0;i<points.length;i++){
+
+            resultPoint.add(GeometryUtils.multiply(points[i],GeometryUtils.binomialCoefficient(points.length-1,i)*Math.pow(t,i)*Math.pow(1-t,points.length-1-i)));
+
+        }
+
+        return resultPoint;
+
+
+        /*
         return GeometryUtils.add(
                     GeometryUtils.add(
                             GeometryUtils.multiply(points[0],(Math.pow(1-t,3))),
@@ -34,6 +53,8 @@ public class Bezier extends Primitive{
                              GeometryUtils.multiply(points[3],Math.pow(t,3))
                      )
         );
+
+         */
     }
 
 

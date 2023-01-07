@@ -1,5 +1,5 @@
 public class Point3D extends Point {
-    private double z;
+    protected double z;
 
     char charToDraw;
 

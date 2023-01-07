@@ -18,19 +18,20 @@ public class GeometryUtils {
         int bottom = points[0].getY();
 
         for(int i=1;i<points.length;i++){
-            if(points[i].getX()<left){
-                left = points[i].getX();
+            if(points[i]!=null){
+                if(points[i].getX()<left){
+                    left = points[i].getX();
+                }
+                if(points[i].getX()>right){
+                    right = points[i].getX();
+                }
+                if(points[i].getY()<top){
+                    top = points[i].getY();
+                }
+                if(points[i].getY()>bottom){
+                    bottom = points[i].getY();
+                }
             }
-            if(points[i].getX()>right){
-                right = points[i].getX();
-            }
-            if(points[i].getY()<top){
-                top = points[i].getY();
-            }
-            if(points[i].getY()>bottom){
-                bottom = points[i].getY();
-            }
-
         }
 
         Point[] boundingBox = new Point[4];
@@ -60,5 +61,32 @@ public class GeometryUtils {
         return p1.getX()*p2.getY() - p1.getY()*p2.getX();
     }
 
+
+    public static Point3D crossProduct3D(Point3D p1, Point3D p2){
+
+        return new Point3D((int)(p1.y*p2.z - p1.z*p2.y),(int)(-p1.x*p2.z + p1.z*p2.x),(int)(p1.x*p2.y-p1.y*p2.x));
+    }
+
+    public static double dotProduct3D(Point3D p1, Point3D p2){
+
+        return p1.x*p2.x + p1.y*p2.y + p1.z*p2.z;
+
+
+    }
+
+    public static int binomialCoefficient(int n, int i){
+        return factorial(n) / (factorial(i)*factorial(n-i));
+    }
+    public static  int factorial(int n){
+
+        int result=1;
+
+        for(int i=2;i<=n;i++){
+            result*=i;
+        }
+
+        return result;
+
+    }
 
 }
