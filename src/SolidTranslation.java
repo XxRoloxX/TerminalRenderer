@@ -13,11 +13,7 @@ public class SolidTranslation extends ObjectAnimation{
     protected void animationStep() {
         Point[] boundingBox = itemToAnimate.getBoundingBox();
 
-        for(Point point: boundingBox){
-            System.out.println(point);
-        }
-
-        //Cube is above top border of scene
+        //Solid is above top border of scene
 
         if(boundingBox[0].getY()<0){
 

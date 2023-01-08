@@ -4,19 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Solid.java" afterDir="false" />
+    <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="Added Tetrahedron">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnimatedScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CubeAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolidRotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CubeTranslation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolidTranslation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeometryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeometryUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tetrahedron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tetrahedron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SolidTranslation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolidTranslation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Bezier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/ComplexItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Cube.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/GeometryUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/ItemOutOfScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Point3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Primitive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Rect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Scene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Segment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Shape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/TextItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nvimCoding/Triangle.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +108,7 @@
       <workItem from="1673089526600" duration="19809000" />
       <workItem from="1673112818696" duration="8128000" />
       <workItem from="1673167561871" duration="623000" />
-      <workItem from="1673173457014" duration="13186000" />
+      <workItem from="1673173457014" duration="14685000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle">
       <created>1672048275059</created>
@@ -136,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673120903375</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Tetrahedron">
+      <created>1673186840830</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673186840830</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +187,8 @@
     <MESSAGE value="Animation of 3D objects, and added support for videos" />
     <MESSAGE value="Cool object translation in animation" />
     <MESSAGE value="Fixed cube translation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed cube translation" />
+    <MESSAGE value="Added Tetrahedron" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Tetrahedron" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

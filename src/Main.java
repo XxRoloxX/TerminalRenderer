@@ -109,7 +109,7 @@ public class Main {
         Tetrahedron tetrahedron1 = new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) );
 
 
-        AnimatedScene animatedScene = new AnimatedScene(300,300);
+        AnimatedScene animatedScene = new AnimatedScene(300,200);
 
         SolidRotation cube1Animation = new SolidRotation(cube1,2);
         SolidRotation cube2Animation = new SolidRotation(cube2,2);
@@ -134,10 +134,10 @@ public class Main {
 
         animatedScene.addVideo(videoBackground);
         animatedScene.addVideo(cube1Animation);
-        animatedScene.addVideo(cube2Animation);
+       // animatedScene.addVideo(cube2Animation);
         animatedScene.addVideo(cube3Animation);
         animatedScene.addVideo(cube4Animation);
-        animatedScene.addVideo(cube5Animation);
+       // animatedScene.addVideo(cube5Animation);
         animatedScene.addVideo(cube6Animation);
         animatedScene.addVideo(tetrahydron1Translation);
         animatedScene.addVideo(tetrahydron1Rotation);

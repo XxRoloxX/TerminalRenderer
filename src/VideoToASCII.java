@@ -202,7 +202,7 @@ public class VideoToASCII implements Video {
     public Item getNewFrame() {
        if(framesIterator.hasNext()){
             latestFrame.copyASCIIImage(framesIterator.next());
-            System.out.println("Next frame");
+            //System.out.println("Next frame");
             return latestFrame;
        }else{
            return null;
