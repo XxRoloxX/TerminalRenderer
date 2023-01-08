@@ -1,13 +1,10 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-
-public class CubeAnimation extends ObjectAnimation{
+public class SolidRotation extends ObjectAnimation{
 
     private double xAxisRotation;
     private double yAxisRotation;
     private double zAxisRotation;
 
-    public CubeAnimation(Item cube, int length){
+    public SolidRotation(Solid cube, int length){
         super(cube, length);
          xAxisRotation = 0;
          yAxisRotation=0;
@@ -20,9 +17,9 @@ public class CubeAnimation extends ObjectAnimation{
     }
 
     protected void animationStep() {
-        ((Cube)itemToAnimate).rotatePointsOnYAxis(xAxisRotation);
-        ((Cube)itemToAnimate).rotatePointsOnXAxis(yAxisRotation);
-        ((Cube)itemToAnimate).rotatePointsOnZAxis(zAxisRotation);
+        ((Solid)itemToAnimate).rotatePointsOnYAxis(xAxisRotation);
+        ((Solid)itemToAnimate).rotatePointsOnXAxis(yAxisRotation);
+        ((Solid)itemToAnimate).rotatePointsOnZAxis(zAxisRotation);
     }
 
 

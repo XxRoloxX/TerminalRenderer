@@ -42,8 +42,8 @@ public class Point implements Comparable<Point>{
     }
 
     public void multiply(double multiplicator){
-        x = (int) (x*multiplicator);
-        y = (int) (y*multiplicator);
+        x =  (x*multiplicator);
+        y =  (y*multiplicator);
     }
     public void add(Point otherPoint){
         x+=otherPoint.x;

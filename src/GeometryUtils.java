@@ -43,6 +43,30 @@ public class GeometryUtils {
         return boundingBox;
     }
 
+    // [0] - smallest value in z-axis, [1] - biggest value in z-axis
+    public static int[] getDephBoundingBox(Point3D[] points){
+        int min = points[0].getZ();
+        int max = points[0].getZ();
+
+        for(int i=1;i<points.length;i++){
+
+            if(points[i].getZ()<min){
+                min=points[i].getZ();
+            }
+
+            else if(points[i].getZ()>max){
+                max=points[i].getZ();
+            }
+
+        }
+        int[] result = new int[2];
+        result[0] = min;
+        result[1] = max;
+
+        return result;
+
+    }
+
     public static Point add(Point p1, Point p2){
         Point result = new Point(p1.getX()+ p2.getX(),p1.getY()+ p2.getY());
         return result;
@@ -57,6 +81,11 @@ public class GeometryUtils {
         Point result = new Point(p2.getX()-p1.getX(), p2.getY() - p1.getY());
         return result;
     }
+    public static Point3D subtract3D(Point3D p1, Point3D p2){
+        Point3D result = new Point3D(p2.getX()-p1.getX(), p2.getY() - p1.getY(),p2.getZ()-p1.getZ());
+        return result;
+    }
+
     public static double crossProduct(Point p1, Point p2){
         return p1.getX()*p2.getY() - p1.getY()*p2.getX();
     }
@@ -86,6 +115,18 @@ public class GeometryUtils {
         }
 
         return result;
+
+    }
+
+    public static double getTetrahedronVolume(Point3D[] vertices){
+
+        return Math.abs(GeometryUtils.dotProduct3D(
+                GeometryUtils.crossProduct3D(GeometryUtils.subtract3D(vertices[1],vertices[2]),GeometryUtils.subtract3D(vertices[3],vertices[2])),
+                GeometryUtils.subtract3D(vertices[0],vertices[2]))/6);
+
+
+
+
 
     }
 

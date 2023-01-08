@@ -53,7 +53,7 @@ public class AnimatedScene {
             ImageToASCII.clearScreen();
             scene.clearScene();
             scene.draw();
-            Thread.sleep(10);
+            Thread.sleep(20);
 
         }
      }

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Cube extends Shape{
+public class Cube extends Solid{
 
     private int width;
     private double rotationX;

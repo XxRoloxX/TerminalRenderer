@@ -16,6 +16,7 @@ public class TextItem extends Item {
         this.fontSize = fontSize;
     }
 
+    /*
     public String drawString(String text, String charToDraw, int imageWidth, int imageHeight, int fontSize, int xPosition, int yPosition){
 
         BufferedImage image = new BufferedImage(imageWidth, imageHeight, BufferedImage.TYPE_INT_RGB);
@@ -39,6 +40,8 @@ public class TextItem extends Item {
         return stringBuilder.toString();
 
     }
+
+     */
 
     @Override
     public Point[] getBoundingBox() {

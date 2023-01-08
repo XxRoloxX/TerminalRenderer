@@ -1,12 +1,12 @@
-public class CubeTranslation extends ObjectAnimation{
+public class SolidTranslation extends ObjectAnimation{
 
     Point movementVector;
-    public CubeTranslation(Point initialVector, Cube cubeToAnimate, int animationLength){
-        super(cubeToAnimate,animationLength);
+    public SolidTranslation(Point initialVector, Solid solidToAnimate, int animationLength){
+        super(solidToAnimate,animationLength);
         movementVector = initialVector;
     }
-    public CubeTranslation(Cube cubeToAnimate, int animationLength){
-        super(cubeToAnimate,animationLength);
+    public SolidTranslation(Solid solidToAnimate, int animationLength){
+        super(solidToAnimate,animationLength);
         movementVector = new Point(1,1);
     }
     @Override

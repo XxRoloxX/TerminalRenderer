@@ -86,20 +86,39 @@ public class Main {
         }
 
     }
+
+    public static void tetrahedronTest() throws InterruptedException {
+
+        //Tetrahedron tetrahedron = new Tetrahedron(true,new Point3D(50,60,-20), new Point3D(100,110,100), new Point3D(70,90,-50), new Point3D(150,110,70));
+        Tetrahedron tetrahedron = new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50));
+
+        AnimatedScene scene = new AnimatedScene(300,200);
+        SolidRotation tetrahedronAnimation = new SolidRotation(tetrahedron,5000);
+        tetrahedronAnimation.setRotationAngles(0.1,0.1,0.1);
+        scene.addVideo(tetrahedronAnimation);
+        scene.drawFrames();
+
+
+
+
+    }
     public static  void animationTest()throws InterruptedException{
         Cube cube3 = new Cube(true, new Point(150,50),30);
         Cube cube2 = new Cube(true, new Point(100,100),50);
         Cube cube1 = new Cube(true, new Point(50,50),30);
+        Tetrahedron tetrahedron1 = new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) );
 
 
         AnimatedScene animatedScene = new AnimatedScene(300,300);
 
-        CubeAnimation cube1Animation = new CubeAnimation(cube1,2);
-        CubeAnimation cube2Animation = new CubeAnimation(cube2,2);
-        CubeAnimation cube3Animation = new CubeAnimation(cube3,2);
-        CubeTranslation cube4Animation = new CubeTranslation(cube3,2);
-        CubeTranslation cube5Animation = new CubeTranslation(new Point(-1,1),cube2,2);
-        CubeTranslation cube6Animation = new CubeTranslation(new Point(-1,-1),cube1,2);
+        SolidRotation cube1Animation = new SolidRotation(cube1,2);
+        SolidRotation cube2Animation = new SolidRotation(cube2,2);
+        SolidRotation cube3Animation = new SolidRotation(cube3,2);
+        SolidRotation tetrahydron1Rotation = new SolidRotation(tetrahedron1,2);
+        SolidTranslation cube4Animation = new SolidTranslation(cube3,2);
+        SolidTranslation cube5Animation = new SolidTranslation(new Point(-1,1),cube2,2);
+        SolidTranslation cube6Animation = new SolidTranslation(new Point(-1,-1),cube1,2);
+        SolidTranslation tetrahydron1Translation = new SolidTranslation(new Point(1,1),tetrahedron1,2);
 
 
 
@@ -107,6 +126,7 @@ public class Main {
         cube1Animation.setRotationAngles(0.1,0.1,0.1);
         cube2Animation.setRotationAngles(-0.1,0.1,0.1);
         cube3Animation.setRotationAngles(-0.1,0.1,-0.1);
+        tetrahydron1Rotation.setRotationAngles(0.1,0.1,0.1);
 
         VideoToASCII videoBackground = new VideoToASCII();
         videoBackground.loadVideo("/home/wieslaw/Videos/simplescreenrecorder-2022-12-27_16.57.50.mp4");
@@ -119,6 +139,9 @@ public class Main {
         animatedScene.addVideo(cube4Animation);
         animatedScene.addVideo(cube5Animation);
         animatedScene.addVideo(cube6Animation);
+        animatedScene.addVideo(tetrahydron1Translation);
+        animatedScene.addVideo(tetrahydron1Rotation);
+
 
 
         animatedScene.drawFrames();
@@ -127,6 +150,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
         animationTest();
-
+        //christmasCard();
+        //tetrahedronTest();
     }
 }

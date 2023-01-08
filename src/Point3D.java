@@ -120,4 +120,20 @@ public class Point3D extends Point {
     public String toString(){
         return "("+x+", "+y+", "+z+")";
     }
+
+    public void add(Point3D other){
+        super.add(other);
+        this.z+=other.z;
+    }
+    public void multiply(double multiplicator){
+        super.multiply(multiplicator);
+        this.z*=multiplicator;
+    }
+    public void subtract(Point3D other){
+        super.add(other);
+        this.z-=other.z;
+    }
+
+
+
 }
