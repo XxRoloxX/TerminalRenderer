@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="Added Tetrahedron">
+    <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AnimatedScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ImageToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageToASCII.java" afterDir="false" />
@@ -103,7 +103,9 @@
       <workItem from="1673167561871" duration="623000" />
       <workItem from="1673173457014" duration="17712000" />
       <workItem from="1673210223372" duration="3518000" />
-      <workItem from="1673267006328" duration="1263000" />
+      <workItem from="1673267006328" duration="2803000" />
+      <workItem from="1673290245115" duration="1050000" />
+      <workItem from="1673295488210" duration="2675000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle">
       <created>1672048275059</created>
@@ -147,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673186840830</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Video synchronization with framerate">
+      <created>1673268378249</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673268378249</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +192,8 @@
     <MESSAGE value="Cool object translation in animation" />
     <MESSAGE value="Fixed cube translation" />
     <MESSAGE value="Added Tetrahedron" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Tetrahedron" />
+    <MESSAGE value="Video synchronization with framerate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Video synchronization with framerate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
