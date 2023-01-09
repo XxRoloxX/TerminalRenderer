@@ -22,7 +22,7 @@ public class VideoToASCII implements Video {
     private Iterator<ImageToASCII> framesIterator;
 
     public VideoToASCII(){
-        frames = new ArrayList();
+        frames = new ArrayList<>();
         sleepTime=DEFAULT_SLEEP_TIME;
         latestFrame = new ImageToASCII();
     }
@@ -66,7 +66,7 @@ public class VideoToASCII implements Video {
         for (int y = 0; y < imageHeight; y++) {
 
             for (int x = 0; x < imageWidth; x++) {
-                stringBuilder.append(image.getRGB(x, y) <= -16000000 ? " ": charToDraw);
+                stringBuilder.append(image.getRGB(x, y) <= -1600000 ? " ": charToDraw);
                 stringBuilder.append("  ");
             }
             stringBuilder.append("\n");
