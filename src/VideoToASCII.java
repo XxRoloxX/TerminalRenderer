@@ -17,6 +17,8 @@ public class VideoToASCII implements Video {
     int videoWidth;
     int videoHeight;
 
+    Point position;
+
     private ImageToASCII latestFrame;
 
     private Iterator<ImageToASCII> framesIterator;
@@ -25,6 +27,10 @@ public class VideoToASCII implements Video {
         frames = new ArrayList<>();
         sleepTime=DEFAULT_SLEEP_TIME;
         latestFrame = new ImageToASCII();
+    }
+
+    public void setPosition(Point position){
+        this.position = new Point(position);
     }
     public boolean setSleepTime(int newSleepTime){
         if(sleepTime<0){
@@ -146,6 +152,7 @@ public class VideoToASCII implements Video {
             System.out.println(name);
             //System.out.println(opened);
             if(opened){
+                frames.get(i).setPosition(position);
                 frames.get(i).createASCII();
             }
             i++;
