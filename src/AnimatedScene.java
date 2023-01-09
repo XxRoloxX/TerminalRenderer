@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 
 public class AnimatedScene {
@@ -8,6 +9,8 @@ public class AnimatedScene {
     private ArrayList<Video> videos;
 
     boolean animationFinished;
+
+    double frameRate;
 
     ArrayList<Iterator<Item>>videoIterators;
 
@@ -35,25 +38,38 @@ public class AnimatedScene {
          }
      }
 
+
       */
 
-     void drawFrames() throws InterruptedException {
+    void setFrameRate(double frameRate){
+        this.frameRate = (1/frameRate)*1000;
 
+    }
+
+     void drawFrames() throws InterruptedException {
+        Date date = new Date();
+
+        long timeOfLastFrame = date.getTime();
 
         while(!animationFinished){
-            animationFinished=true;
+            //System.out.println(date.getTime()+", "+timeOfLastFrame+", "+frameRate);
+            date = new Date();
+            if(date.getTime()-timeOfLastFrame > frameRate){
+                timeOfLastFrame = date.getTime();
+                animationFinished = true;
 
-            for(Video video: videos){
-                if(video.getNewFrame()!=null){
-                    animationFinished=false;
+                for (Video video : videos) {
+                    if (video.getNewFrame() != null) {
+                        animationFinished = false;
+                    }
                 }
+
+
+                ImageToASCII.clearScreen();
+                scene.clearScene();
+                scene.draw();
+                //Thread.sleep((int) frameRate);
             }
-
-
-            ImageToASCII.clearScreen();
-            scene.clearScene();
-            scene.draw();
-            Thread.sleep(20);
 
         }
      }

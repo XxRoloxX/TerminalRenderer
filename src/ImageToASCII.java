@@ -92,7 +92,8 @@ public class ImageToASCII extends Item {
 
         for(int i=0;i<height;i++){
             for(int j=0;j<width;j++){
-                ASCIIImage[i][j] = image.getRGB(j,i) <= -1600000 ? ' ': '*';
+                ASCIIImage[i][j] = image.getRGB(j,i) <= -13005000 ? ' ': '*';
+                //-13005000
             }
         }
 

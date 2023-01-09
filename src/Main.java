@@ -100,8 +100,7 @@ public class Main {
 
 
 
-
-    }
+   }
     public static  void animationTest()throws InterruptedException{
         Cube cube3 = new Cube(true, new Point(150,50),30);
         Cube cube2 = new Cube(true, new Point(100,100),50);
@@ -109,7 +108,8 @@ public class Main {
         Tetrahedron tetrahedron1 = new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) );
 
 
-        AnimatedScene animatedScene = new AnimatedScene(300,200);
+        AnimatedScene animatedScene = new AnimatedScene(300,300);
+        animatedScene.setFrameRate(30);
 
         SolidRotation cube1Animation = new SolidRotation(cube1,2);
         SolidRotation cube2Animation = new SolidRotation(cube2,2);
@@ -129,18 +129,18 @@ public class Main {
         tetrahydron1Rotation.setRotationAngles(0.1,0.1,0.1);
 
         VideoToASCII videoBackground = new VideoToASCII();
-        videoBackground.loadVideo("/home/wieslaw/Videos/simplescreenrecorder-2022-12-27_16.57.50.mp4");
+        videoBackground.loadVideo("/home/wieslaw/Videos/simplescreenrecorder-2023-01-08_22.22.12.mp4");
 
 
         animatedScene.addVideo(videoBackground);
-        animatedScene.addVideo(cube1Animation);
-       // animatedScene.addVideo(cube2Animation);
-        animatedScene.addVideo(cube3Animation);
-        animatedScene.addVideo(cube4Animation);
-       // animatedScene.addVideo(cube5Animation);
-        animatedScene.addVideo(cube6Animation);
-        animatedScene.addVideo(tetrahydron1Translation);
-        animatedScene.addVideo(tetrahydron1Rotation);
+        //animatedScene.addVideo(cube1Animation);
+        //animatedScene.addVideo(cube2Animation);
+        //animatedScene.addVideo(cube3Animation);
+        //animatedScene.addVideo(cube4Animation);
+        //animatedScene.addVideo(cube5Animation);
+        //animatedScene.addVideo(cube6Animation);
+        //animatedScene.addVideo(tetrahydron1Translation);
+       //animatedScene.addVideo(tetrahydron1Rotation);
 
 
 
