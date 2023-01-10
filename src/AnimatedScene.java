@@ -54,7 +54,7 @@ public class AnimatedScene {
         while(!animationFinished){
             //System.out.println(date.getTime()+", "+timeOfLastFrame+", "+frameRate);
             date = new Date();
-            if(date.getTime()-timeOfLastFrame > frameRate*0.9){
+            if(date.getTime()-timeOfLastFrame > frameRate){
                 timeOfLastFrame = date.getTime();
                 animationFinished = true;
 

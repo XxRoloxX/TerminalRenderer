@@ -108,7 +108,7 @@ public class Main {
         Tetrahedron tetrahedron1 = new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) );
 
 
-        AnimatedScene animatedScene = new AnimatedScene(400,400);
+        AnimatedScene animatedScene = new AnimatedScene(400,300);
         animatedScene.setFrameRate(30);
 
         SolidRotation cube1Animation = new SolidRotation(cube1,2);
@@ -129,7 +129,10 @@ public class Main {
         tetrahydron1Rotation.setRotationAngles(0.1,0.1,0.1);
 
         VideoToASCII videoBackground = new VideoToASCII();
-        videoBackground.loadVideo("~/Wideo/simplescreenrecorder-2023-01-09_07.53.39.mp4");
+        videoBackground.setPosition(new Point(0,0));
+        //videoBackground.loadVideo("~/Videos/simplescreenrecorder-2023-01-10_21.49.40.mp4");
+        videoBackground.loadVideo("~/Videos/simplescreenrecorder-2023-01-10_23.30.22.mp4");
+
 
 
         animatedScene.addVideo(videoBackground);

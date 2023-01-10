@@ -212,7 +212,8 @@ public class VideoToASCII implements Video {
             //System.out.println("Next frame");
             return latestFrame;
        }else{
-           return null;
+           framesIterator = frames.iterator();
+           return latestFrame;
        }
     }
 }
