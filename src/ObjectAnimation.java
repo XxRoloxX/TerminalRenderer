@@ -20,5 +20,7 @@ public abstract class ObjectAnimation implements Video{
         return itemToAnimate;
     }
 
-
+    public ItemInterface getItemToAnimate() {
+        return itemToAnimate;
+    }
 }

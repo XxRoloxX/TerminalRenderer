@@ -97,4 +97,8 @@ public class Scene {
     public char[][] getSceneField() {
         return sceneField;
     }
+
+    public ArrayList<ItemInterface> getItems(){
+        return items;
+    }
 }

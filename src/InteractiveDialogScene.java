@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class InteractiveDialogScene {
@@ -35,8 +36,8 @@ public class InteractiveDialogScene {
                 case '8':
                 case '9':
                     scene.unhighlightAll();
-                    if(scene.getItem(Integer.parseInt(String.valueOf(keyPressed)))!=null){
-                        currentlyHighlightedItem=(DialogOption) scene.getItem(Integer.parseInt(String.valueOf(keyPressed)));
+                    if(scene.getItem(Integer.parseInt(String.valueOf(keyPressed))-1)!=null){
+                        currentlyHighlightedItem=(DialogOption) scene.getItem(Integer.parseInt(String.valueOf(keyPressed))-1);
                         scene.unhighlightAll();
                         currentlyHighlightedItem.setHighlighted(true);
                     }
@@ -49,6 +50,9 @@ public class InteractiveDialogScene {
 
                     }
                     break;
+                case 'q':
+                    userFinishedInput=true;
+                    break;
 
             }
 
@@ -56,5 +60,8 @@ public class InteractiveDialogScene {
         }
 
 
+    }
+    public ArrayList<ItemInterface> getItems(){
+        return scene.getItems();
     }
 }

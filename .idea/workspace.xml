@@ -5,33 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SolidBoundingBoxDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SolidDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SolidInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnimatedScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bezier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bezier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BoundingBoxDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoundingBoxDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComplexItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ImageToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageToASCII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComplexAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InteractiveDialogScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InteractiveDialogScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjectAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjectAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Segment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SolidRotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolidRotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SolidTranslation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolidTranslation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tetrahedron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tetrahedron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673634317318</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Applied Decorator Design Pattern to Solid via SolidInterface">
+      <created>1673639358318</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673639358318</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,14 +216,15 @@
     <MESSAGE value="Added Tetrahedron" />
     <MESSAGE value="Video synchronization with framerate" />
     <MESSAGE value="Applied Decorator Design Pattern to Item via ItemInterface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Applied Decorator Design Pattern to Item via ItemInterface" />
+    <MESSAGE value="Applied Decorator Design Pattern to Solid via SolidInterface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Applied Decorator Design Pattern to Solid via SolidInterface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>145</line>
+          <line>153</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">

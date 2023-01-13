@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
 
@@ -67,6 +68,13 @@ public class Main {
 
 
         scene.draw();
+    }
+    public void boundedChristmasCard(){
+
+
+
+
+
     }
     public static void cubeTest()throws InterruptedException{
         Scene scene = new Scene(200,200);
@@ -158,26 +166,76 @@ public class Main {
         animatedScene.drawFrames();
 
     }
-    public static void testDialogScene(){
+    public static void testDialogScene() throws InterruptedException {
         //DialogScene scene = new DialogScene(300,300);
         //scene.addOption(new TextItem(new Point(0,0),"opcja 1",17,300,40),new Circle(false,new Point(50,50),20));
         //scene.addOption(new TextItem(new Point(0,0),"opcja 2",17,300,40),new Circle(false,new Point(70,70),30));
         //scene.selectOption(1, true);
 
         InteractiveDialogScene interactiveScene = new InteractiveDialogScene(300,300);
-        interactiveScene.addOption(new TextItem(new Point(0,0),"opcja 1",17,300,40),new Circle(false,new Point(50,50),20));
-        interactiveScene.addOption(new TextItem(new Point(0,0),"opcja 2",17,300,40),new Circle(false,new Point(70,70),30));
-        interactiveScene.addOption(new TextItem(new Point(0,0),"opcja 3",17,300,40),new Circle(false,new Point(50,50),20));
-        interactiveScene.addOption(new TextItem(new Point(0,0),"opcja 4",17,300,40),new Circle(false,new Point(70,70),30));
+        interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 1",17,300,40),
+                new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ));
+        interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 2",17,300,40),
+                new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ) );
+        interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 3",17,300,40),
+                new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ));
+
+       /* interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 4",17,300,40),
+                new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ) );
+        */
+        AnimatedScene animatedScene = new AnimatedScene(400,300);
+        animatedScene.setFrameRate(30);
+        VideoToASCII videoBackground = new VideoToASCII();
+        videoBackground.setPosition(new Point(0,0));
+        //videoBackground.loadVideo("~/Videos/simplescreenrecorder-2023-01-10_21.49.40.mp4");
+        videoBackground.loadVideo("~/Videos/simplescreenrecorder-2023-01-10_23.30.22.mp4");
+        //animatedScene.addVideo(videoBackground);
+
+
 
         interactiveScene.runScene();
+        ArrayList<ItemInterface>itemsFromDialogScene = interactiveScene.getItems();
+        ArrayList<ObjectAnimation>itemRotations = new ArrayList<>();
+
+
+        for(ItemInterface item: itemsFromDialogScene){
+            if(((DialogOption)item).isChosen()){
+                itemRotations.add(new ComplexAnimation(new SolidBoundingBoxDecorator((SolidInterface)((DialogOption)item).getRepresentedItem()),10));
+            }else{
+                itemRotations.add(new ComplexAnimation((SolidInterface)((DialogOption)item).getRepresentedItem(),10));
+
+            }
+        }
+
+        Random rand = new Random();
+        SolidRotation rotation;
+        SolidTranslation translation;
+        for(ObjectAnimation complexAnimation: itemRotations){
+            rotation =new SolidRotation((SolidInterface)complexAnimation.getItemToAnimate(),10);
+            translation = new SolidTranslation(new Point(rand.nextInt(0,3)-1,rand.nextInt(0,3)-1),(SolidInterface)complexAnimation.getItemToAnimate(),10);
+            rotation.setRotationAngles(rand.nextDouble(0,0.2),rand.nextDouble(0,0.2),rand.nextDouble(0,0.2));
+            ((ComplexAnimation)complexAnimation).addAnimation(rotation);
+            ((ComplexAnimation)complexAnimation).addAnimation(translation);
+            animatedScene.addVideo(complexAnimation);
+
+        }
+
+        animatedScene.drawFrames();
+
+
+
+
+
+
+
+
        // scene.draw();
     }
     public static void main(String[] args) throws InterruptedException {
 
-        animationTest();
+        //animationTest();
         //christmasCard();
         //tetrahedronTest();
-        //testDialogScene();
+        testDialogScene();
     }
 }

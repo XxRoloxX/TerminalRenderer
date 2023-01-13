@@ -4,7 +4,7 @@ public class ComplexAnimation extends ObjectAnimation{
 
     ArrayList<ObjectAnimation> animations;
 
-    public ComplexAnimation(Item itemToAnimate, int animationLength){
+    public ComplexAnimation(ItemInterface itemToAnimate, int animationLength){
         super(itemToAnimate,animationLength);
         animations = new ArrayList<>();
 
