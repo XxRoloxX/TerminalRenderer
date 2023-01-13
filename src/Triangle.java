@@ -8,7 +8,9 @@ public class Triangle extends Shape {
     private Point p2;
     private Point p3;
 
-    public Triangle(boolean filled,Point p1, Point p2, Point p3){
+    private static Triangle triangle;
+
+    private Triangle(boolean filled,Point p1, Point p2, Point p3){
         super();
         this.p1 = p1;
         this.p2 = p2;
@@ -22,6 +24,27 @@ public class Triangle extends Shape {
         points = GeometryUtils.getBoundingBoxAroundPoints(points);
 
         this.position = points[0];
+
+    }
+
+    public static Triangle getInstance(boolean filled,Point p1, Point p2, Point p3){
+
+        if(triangle==null){
+            triangle = new Triangle(filled, p1,p2,p3);
+
+        }else{
+            triangle.p1 = p1;
+            triangle.p2 = p2;
+            triangle.p3 = p3;
+            triangle.filled = filled;
+
+        }
+        return triangle;
+
+
+    }
+    public static void copyTriangle(Triangle OtherTriangle){
+
 
     }
     public void translate(Point o){
