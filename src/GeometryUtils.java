@@ -2,6 +2,8 @@ public class GeometryUtils {
 
     final static double DEFAULT_PRECISION=0.5;
     final static char DEFAULT_CHAR = '#';
+
+    final static int DEFAULT_TRESHHOLD = -16000000;
     public static double distanceBetweenPoints(Point p1, Point p2){
        return  p1.getDistance(p2);
     }

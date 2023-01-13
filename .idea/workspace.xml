@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnimatedScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DialogOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DialogOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DialogScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DialogScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeometryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeometryUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InteractiveDialogScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InteractiveDialogScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,20 +58,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/wieslaw/Repos/TerminalRenderer",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/wieslaw/Kursy/ParadygmatyProgramowaniaLaboratoria/ParadygmatyProgramowaniaLista9&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -106,6 +110,12 @@
       <workItem from="1673290245115" duration="1050000" />
       <workItem from="1673295488210" duration="2675000" />
       <workItem from="1673381833200" duration="2710000" />
+      <workItem from="1673531337528" duration="720000" />
+      <workItem from="1673552864552" duration="1663000" />
+      <workItem from="1673600917265" duration="14000" />
+      <workItem from="1673602059689" duration="2181000" />
+      <workItem from="1673605354569" duration="4978000" />
+      <workItem from="1673626457960" duration="4561000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle">
       <created>1672048275059</created>
@@ -173,7 +183,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Stateless_Cube" />
+                        <option value="Adopted_Singleton_Design_Patern_Triangle" />
                       </list>
                     </value>
                   </entry>

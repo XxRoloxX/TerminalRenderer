@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Main {
 
+
     public static void christmasCard(){
         Scene scene = new Scene(400,300);
         Item segment = new Segment(new Point(50,50),new Point(100,100));
@@ -43,9 +44,9 @@ public class Main {
 
 
 
-        Item text = new TextItem(new Point(10,200),"Wesołych świat xdd", 20);
+        Item text = new TextItem(new Point(10,200),"Wesołych świat xdd", 20, 100,20);
 
-        Item triangle = new Triangle(false, new Point(90,150), new Point(30,175),new Point(50,100));
+        Item triangle =new Triangle(false, new Point(90,150), new Point(30,175),new Point(50,100));
         triangle.setPrecision(0.01);
     /*
         Item tri = new Triangle(false, new Point(40,40), new Point(100,200),new Point (300,450));
@@ -150,10 +151,26 @@ public class Main {
         animatedScene.drawFrames();
 
     }
+    public static void testDialogScene(){
+        //DialogScene scene = new DialogScene(300,300);
+        //scene.addOption(new TextItem(new Point(0,0),"opcja 1",17,300,40),new Circle(false,new Point(50,50),20));
+        //scene.addOption(new TextItem(new Point(0,0),"opcja 2",17,300,40),new Circle(false,new Point(70,70),30));
+        //scene.selectOption(1, true);
+
+        InteractiveDialogScene interactiveScene = new InteractiveDialogScene(300,300);
+        interactiveScene.addOption(new TextItem(new Point(0,0),"opcja 1",17,300,40),new Circle(false,new Point(50,50),20));
+        interactiveScene.addOption(new TextItem(new Point(0,0),"opcja 2",17,300,40),new Circle(false,new Point(70,70),30));
+        interactiveScene.addOption(new TextItem(new Point(0,0),"opcja 3",17,300,40),new Circle(false,new Point(50,50),20));
+        interactiveScene.addOption(new TextItem(new Point(0,0),"opcja 4",17,300,40),new Circle(false,new Point(70,70),30));
+
+        interactiveScene.runScene();
+       // scene.draw();
+    }
     public static void main(String[] args) throws InterruptedException {
 
-        animationTest();
+        //animationTest();
         //christmasCard();
         //tetrahedronTest();
+        testDialogScene();
     }
 }

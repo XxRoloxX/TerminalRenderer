@@ -7,7 +7,7 @@ public class Scene {
     private int height;
 
     private char[][] sceneField;
-    private ArrayList<Item> items;
+    protected ArrayList<Item> items;
 
     public Scene(int width, int height){
         this.width=width;
@@ -80,6 +80,13 @@ public class Scene {
         System.out.flush();
     }
 
+    public Item getItem(int index){
+        if(index>=0 && index<items.size()){
+            return items.get(index);
+        }else{
+            return null;
+        }
+    }
 
 
 }
