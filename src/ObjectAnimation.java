@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public abstract class ObjectAnimation implements Video{
 
-    protected Item itemToAnimate;
-    protected ArrayList<Item> frames;
+    protected ItemInterface itemToAnimate;
+    protected ArrayList<ItemInterface> frames;
 
     protected int animationLength;
 
-    public ObjectAnimation(Item itemToAnimate, int animationLength){
+    public ObjectAnimation(ItemInterface itemToAnimate, int animationLength){
         this.itemToAnimate=itemToAnimate;
         frames = new ArrayList<>();
         this.animationLength=animationLength;
@@ -15,7 +15,7 @@ public abstract class ObjectAnimation implements Video{
 
    abstract protected void animationStep();
 
-    public Item getNewFrame(){
+    public ItemInterface getNewFrame(){
         animationStep();
         return itemToAnimate;
     }

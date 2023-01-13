@@ -33,7 +33,7 @@ public class Rect extends Shape {
 
                 if (getFilled() == true || j==boundingBox[0].getX() || j == boundingBox[1].getX() || i==boundingBox[0].getY() || i==boundingBox[2].getY()) {
                     if(isInsideScene(j,i)){
-                        sceneField[i][j] = charToDraw;
+                        scene.getSceneField()[i][j] = charToDraw;
                     }
                 }
             }

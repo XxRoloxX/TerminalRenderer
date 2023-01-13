@@ -1,5 +1,5 @@
 public interface ItemInterface {
-    void setScene(char[][] sceneField, int sceneHeight, int sceneWidth);
+
     int compareTo(Item o);
 
     Point getPosition();
@@ -21,7 +21,8 @@ public interface ItemInterface {
     int getDeph();
 
     void setDeph(int deph);
+    Scene getScene();
 
-    char[][] getSceneField();
-    void setSceneField(char[][] sceneField);
+    void setScene(Scene newScene);
+
 }

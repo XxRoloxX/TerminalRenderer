@@ -12,7 +12,7 @@ public class AnimatedScene {
 
     double frameRate;
 
-    ArrayList<Iterator<Item>>videoIterators;
+    ArrayList<Iterator<ItemInterface>>videoIterators;
 
 
     public AnimatedScene(int width, int height){
@@ -22,11 +22,12 @@ public class AnimatedScene {
     }
 
      void addVideo(Video video){
-        videos.add(video);
         scene.addItem(video.getNewFrame());
+        videos.add(video);
+
      }
 
-     void addItem(Item item){
+     void addItem(ItemInterface item){
         scene.addItem(item);
      }
      /*

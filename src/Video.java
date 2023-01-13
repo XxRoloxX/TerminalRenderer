@@ -9,7 +9,7 @@ public interface Video {
 
      //Iterator<Item> iterator();
 
-     public Item getNewFrame();
+     public ItemInterface getNewFrame();
 
 
 

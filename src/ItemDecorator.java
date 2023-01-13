@@ -6,10 +6,6 @@ public class ItemDecorator implements ItemInterface{
         this.decoratedItem=decoratedItem;
     }
 
-    @Override
-    public void setScene(char[][] sceneField, int sceneHeight, int sceneWidth) {
-        decoratedItem.setScene(sceneField,sceneHeight,sceneWidth);
-    }
 
     @Override
     public int compareTo(Item o) {
@@ -77,12 +73,13 @@ public class ItemDecorator implements ItemInterface{
     }
 
     @Override
-    public char[][] getSceneField() {
-        return decoratedItem.getSceneField();
+    public Scene getScene() {
+        return decoratedItem.getScene();
+    }
+    @Override
+    public void setScene(Scene newScene) {
+         decoratedItem.setScene(newScene);
     }
 
-    @Override
-    public void setSceneField(char[][] sceneField) {
-        decoratedItem.setSceneField(sceneField);
-    }
+
 }

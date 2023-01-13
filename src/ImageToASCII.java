@@ -58,8 +58,9 @@ public class ImageToASCII extends Item {
         //createASCII();
         for(int i=0;i<height;i++){
             for(int j=0;j<width;j++){
-                if(position.getY()+i<sceneHeight && position.getX()+j<sceneWidth){
-                    sceneField[position.getY()+i][position.getX()+j]=ASCIIImage[i][j];
+
+                if(isInsideScene(position.getX()+j,position.getY()+i)){
+                    scene.getSceneField()[position.getY()+i][position.getX()+j]=ASCIIImage[i][j];
                 }
 
             }

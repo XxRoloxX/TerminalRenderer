@@ -67,7 +67,7 @@ public class Bezier extends Primitive{
 
             pointOnCurve = bezierCurve(t);
             if(isInsideScene(pointOnCurve.getX(), pointOnCurve.getY())){
-                sceneField[pointOnCurve.getY()][pointOnCurve.getX()]=charToDraw;
+                scene.getSceneField()[pointOnCurve.getY()][pointOnCurve.getX()]=charToDraw;
             }
         }
 

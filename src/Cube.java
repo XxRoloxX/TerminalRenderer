@@ -228,7 +228,7 @@ public class Cube extends Solid{
         translateAllPoints(GeometryUtils.subtract(normalizedPosition,position));
         for(int i=0;i<points.length;i++){
             if(points[i]!=null && isInsideScene(points[i].getX(), points[i].getY())){
-                sceneField[points[i].getY()][points[i].getX()]=points[i].charToDraw;
+                scene.getSceneField()[points[i].getY()][points[i].getX()]=points[i].charToDraw;
             }
         }
         translateAllPoints(GeometryUtils.subtract(position,normalizedPosition));

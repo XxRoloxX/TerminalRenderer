@@ -1,21 +1,21 @@
 public abstract class Item implements ItemInterface,Comparable<Item> {
 
     protected Point position;
-    protected char[][] sceneField;
+    //protected char[][] sceneField;
 
     protected Scene scene;
 
     protected int deph;
 
-    protected int sceneWidth;
-    protected int sceneHeight;
+    //protected int sceneWidth;
+    //protected int sceneHeight;
 
     protected double precision;
     protected char charToDraw;
 
     public Item(){
         position = new Point();
-        sceneField=null;
+        scene=null;
         precision = GeometryUtils.DEFAULT_PRECISION;
         charToDraw = GeometryUtils.DEFAULT_CHAR;
         deph=0;
@@ -79,7 +79,7 @@ public abstract class Item implements ItemInterface,Comparable<Item> {
     }
 
     public boolean isInsideScene(int x, int y){
-        if(x<0 || y<0 || x>=sceneWidth || y>=sceneHeight){
+        if(x<0 || y<0 || x>=scene.getWidth() || y>=scene.getHeight()){
             return false;
         }
 
@@ -94,12 +94,12 @@ public abstract class Item implements ItemInterface,Comparable<Item> {
         this.deph = deph;
     }
 
-    public char[][] getSceneField(){
-        return sceneField;
+    public Scene getScene(){
+        return scene;
     }
-    public void setSceneField(char[][] sceneField){
-        this.sceneField=sceneField;
-    }
+
+
+
 
 
 }

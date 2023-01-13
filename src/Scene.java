@@ -24,7 +24,7 @@ public class Scene {
     }
 
     public void addItem(ItemInterface newItem){
-        newItem.setScene(sceneField,height,width);
+        newItem.setScene(this);
         items.add(newItem);
     }
     public void removeItem(ItemInterface item){
@@ -86,5 +86,15 @@ public class Scene {
         }
     }
 
+    public int getWidth() {
+        return width;
+    }
 
+    public int getHeight() {
+        return height;
+    }
+
+    public char[][] getSceneField() {
+        return sceneField;
+    }
 }

@@ -41,7 +41,7 @@ public class Circle extends Shape {
                 if (getFilled() == true && Math.abs(GeometryUtils.distanceBetweenCoordinates(j,i, middle.getX(), middle.getY()))<=radius
                         || Math.abs(GeometryUtils.distanceBetweenCoordinates(j,i, middle.getX(), middle.getY())-radius) < precision) {
                     if(isInsideScene(j,i)){
-                        sceneField[i][j] = charToDraw;
+                        scene.getSceneField()[i][j] = charToDraw;
                     }
                 }
             }

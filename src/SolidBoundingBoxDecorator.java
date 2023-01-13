@@ -1,7 +1,8 @@
-public class BoundingBoxDecorator extends ItemDecorator{
-    public BoundingBoxDecorator(ItemInterface decoratedItem){
+public class SolidBoundingBoxDecorator extends SolidDecorator{
+    public SolidBoundingBoxDecorator(SolidInterface decoratedItem){
         super(decoratedItem);
     }
+
     @Override
     public void draw(){
         decoratedItem.draw();
@@ -11,4 +12,5 @@ public class BoundingBoxDecorator extends ItemDecorator{
         rect.scene = decoratedItem.getScene();
         rect.draw();
     }
+
 }

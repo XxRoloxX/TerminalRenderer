@@ -88,11 +88,11 @@ public class TextItem extends Item {
             for (int x = 0; x < width; x++) {
                 if(inverse){
                     if(image.getRGB(x, y) < treshhold){
-                        sceneField[y+position.getY()][x+position.getX()] = charToDraw;
+                        scene.getSceneField()[y+position.getY()][x+position.getX()] = charToDraw;
                     }
                 }else{
                     if(image.getRGB(x, y) > treshhold){
-                        sceneField[y+position.getY()][x+position.getX()] = charToDraw;
+                        scene.getSceneField()[y+position.getY()][x+position.getX()] = charToDraw;
                     }
                 }
 

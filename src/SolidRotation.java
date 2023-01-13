@@ -4,7 +4,7 @@ public class SolidRotation extends ObjectAnimation{
     private double yAxisRotation;
     private double zAxisRotation;
 
-    public SolidRotation(Solid cube, int length){
+    public SolidRotation(SolidInterface cube, int length){
         super(cube, length);
          xAxisRotation = 0;
          yAxisRotation=0;
@@ -17,9 +17,9 @@ public class SolidRotation extends ObjectAnimation{
     }
 
     protected void animationStep() {
-        ((Solid)itemToAnimate).rotatePointsOnYAxis(xAxisRotation);
-        ((Solid)itemToAnimate).rotatePointsOnXAxis(yAxisRotation);
-        ((Solid)itemToAnimate).rotatePointsOnZAxis(zAxisRotation);
+        ((SolidInterface)itemToAnimate).rotatePointsOnYAxis(xAxisRotation);
+        ((SolidInterface)itemToAnimate).rotatePointsOnXAxis(yAxisRotation);
+        ((SolidInterface)itemToAnimate).rotatePointsOnZAxis(zAxisRotation);
     }
 
 

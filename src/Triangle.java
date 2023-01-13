@@ -75,7 +75,7 @@ public class Triangle extends Shape {
             for(int j=boundingBox[0].getX();j<boundingBox[3].getX();j++){
 
                 if(isInsideScene(j,i) && (isPointInsideTriangle(new Point(j,i))>=0 && filled || isPointInsideTriangle(new Point(j,i))==0)){
-                    sceneField[i][j]=charToDraw;
+                    scene.getSceneField()[i][j]=charToDraw;
                 }
             }
         }

@@ -206,7 +206,7 @@ public class VideoToASCII implements Video {
     }
 
     @Override
-    public Item getNewFrame() {
+    public ItemInterface getNewFrame() {
        if(framesIterator.hasNext()){
             latestFrame.copyASCIIImage(framesIterator.next());
             //System.out.println("Next frame");

@@ -250,7 +250,7 @@ public class Tetrahedron extends Solid{
         translateAllPoints(GeometryUtils.subtract3D(new Point3D(0,0,0),originalCentroid));
         for(int i=0;i<points.length;i++){
             if(points[i]!=null && isInsideScene(points[i].getX(), points[i].getY())){
-                sceneField[points[i].getY()][points[i].getX()]=points[i].charToDraw;
+                scene.getSceneField()[points[i].getY()][points[i].getX()]=points[i].charToDraw;
             }
         }
         translateAllPoints(GeometryUtils.subtract3D(originalCentroid,new Point3D(0,0,0)));

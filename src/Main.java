@@ -107,7 +107,8 @@ public class Main {
         Cube cube2 = new Cube(true, new Point(100,100),50);
         Cube cube1 = new Cube(true, new Point(50,50),30);
         Tetrahedron tetrahedron1 = new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) );
-
+        SolidInterface tetrahedron2 = (new Tetrahedron(true,new Point3D(100,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ));
+        SolidInterface decoratedTetrahedron =  new SolidBoundingBoxDecorator(tetrahedron2);
 
         AnimatedScene animatedScene = new AnimatedScene(400,300);
         animatedScene.setFrameRate(30);
@@ -116,10 +117,13 @@ public class Main {
         SolidRotation cube2Animation = new SolidRotation(cube2,2);
         SolidRotation cube3Animation = new SolidRotation(cube3,2);
         SolidRotation tetrahydron1Rotation = new SolidRotation(tetrahedron1,2);
+        SolidRotation tetrahydron2Rotation = new SolidRotation(decoratedTetrahedron,2);
         SolidTranslation cube4Animation = new SolidTranslation(cube3,2);
         SolidTranslation cube5Animation = new SolidTranslation(new Point(-1,1),cube2,2);
         SolidTranslation cube6Animation = new SolidTranslation(new Point(-1,-1),cube1,2);
         SolidTranslation tetrahydron1Translation = new SolidTranslation(new Point(1,1),tetrahedron1,2);
+        SolidTranslation tetrahydron2Translation = new SolidTranslation(new Point(1,1),decoratedTetrahedron,2);
+
 
 
 
@@ -128,6 +132,7 @@ public class Main {
         cube2Animation.setRotationAngles(-0.1,0.1,0.1);
         cube3Animation.setRotationAngles(-0.1,0.1,-0.1);
         tetrahydron1Rotation.setRotationAngles(0.1,0.1,0.1);
+        tetrahydron2Rotation.setRotationAngles(0.1,0.1,0.1);
 
         VideoToASCII videoBackground = new VideoToASCII();
         videoBackground.setPosition(new Point(0,0));
@@ -143,8 +148,10 @@ public class Main {
         animatedScene.addVideo(cube4Animation);
         animatedScene.addVideo(cube5Animation);
         animatedScene.addVideo(cube6Animation);
-        animatedScene.addVideo(tetrahydron1Translation);
-        animatedScene.addVideo(tetrahydron1Rotation);
+      //  animatedScene.addVideo(tetrahydron1Translation);
+       // animatedScene.addVideo(tetrahydron1Rotation);
+        animatedScene.addVideo(tetrahydron2Rotation);
+        animatedScene.addVideo(tetrahydron2Translation);
 
 
 
@@ -168,8 +175,8 @@ public class Main {
     }
     public static void main(String[] args) throws InterruptedException {
 
-        //animationTest();
-        christmasCard();
+        animationTest();
+        //christmasCard();
         //tetrahedronTest();
         //testDialogScene();
     }
