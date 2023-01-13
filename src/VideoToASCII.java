@@ -27,6 +27,7 @@ public class VideoToASCII implements Video {
         frames = new ArrayList<>();
         sleepTime=DEFAULT_SLEEP_TIME;
         latestFrame = new ImageToASCII();
+        position = new Point(0,0);
     }
 
     public void setPosition(Point position){

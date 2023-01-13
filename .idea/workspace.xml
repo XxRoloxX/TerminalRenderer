@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComplexAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InteractiveDialogScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InteractiveDialogScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjectAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjectAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +111,7 @@
       <workItem from="1673602059689" duration="2181000" />
       <workItem from="1673605354569" duration="4978000" />
       <workItem from="1673626457960" duration="4561000" />
+      <workItem from="1673649095939" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle">
       <created>1672048275059</created>
@@ -178,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673639358318</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finished InteractiveDialogScene interaction with AnimatedScene">
+      <created>1673647754847</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673647754847</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +222,8 @@
     <MESSAGE value="Video synchronization with framerate" />
     <MESSAGE value="Applied Decorator Design Pattern to Item via ItemInterface" />
     <MESSAGE value="Applied Decorator Design Pattern to Solid via SolidInterface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Applied Decorator Design Pattern to Solid via SolidInterface" />
+    <MESSAGE value="Finished InteractiveDialogScene interaction with AnimatedScene" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished InteractiveDialogScene interaction with AnimatedScene" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

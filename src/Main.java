@@ -172,13 +172,13 @@ public class Main {
         //scene.addOption(new TextItem(new Point(0,0),"opcja 2",17,300,40),new Circle(false,new Point(70,70),30));
         //scene.selectOption(1, true);
 
-        InteractiveDialogScene interactiveScene = new InteractiveDialogScene(300,300);
+        InteractiveDialogScene interactiveScene = new InteractiveDialogScene(300,200);
         interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 1",17,300,40),
-                new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ));
+                new Tetrahedron(false,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ));
         interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 2",17,300,40),
-                new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ) );
+                new Tetrahedron(false,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ) );
         interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 3",17,300,40),
-                new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ));
+                new Tetrahedron(false,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ));
 
        /* interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 4",17,300,40),
                 new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ) );
@@ -210,6 +210,7 @@ public class Main {
         Random rand = new Random();
         SolidRotation rotation;
         SolidTranslation translation;
+
         for(ObjectAnimation complexAnimation: itemRotations){
             rotation =new SolidRotation((SolidInterface)complexAnimation.getItemToAnimate(),10);
             translation = new SolidTranslation(new Point(rand.nextInt(0,3)-1,rand.nextInt(0,3)-1),(SolidInterface)complexAnimation.getItemToAnimate(),10);
