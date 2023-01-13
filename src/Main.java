@@ -24,7 +24,7 @@ public class Main {
         snowmanMouthBezier.setPrecision(0.01);
         Item snowmanLeftEye = new Circle(false,new Point(305,75),5);
         Item snowmanRightEye = new Circle(false, new Point(315,75),5);
-        Item snowmanNose = new Triangle(true, new Point(292,69), new Point(313,84), new Point(317,93));
+        Item snowmanNose = Triangle.getInstance(true, new Point(292,69), new Point(313,84), new Point(317,93));
         snowmanNose.setCharToDraw('?');
         snowmanNose.setDeph(1000);
 
@@ -45,7 +45,7 @@ public class Main {
 
         Item text = new TextItem(new Point(10,200),"Wesołych świat xdd", 20);
 
-        Item triangle = new Triangle(false, new Point(90,150), new Point(30,175),new Point(50,100));
+        Item triangle = Triangle.getInstance(false, new Point(90,150), new Point(30,175),new Point(50,100));
         triangle.setPrecision(0.01);
     /*
         Item tri = new Triangle(false, new Point(40,40), new Point(100,200),new Point (300,450));
