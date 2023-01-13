@@ -6,14 +6,14 @@ public class Main {
 
     public static void christmasCard(){
         Scene scene = new Scene(400,300);
-        Item segment = new Segment(new Point(50,50),new Point(100,100));
+        ItemInterface segment = new Segment(new Point(50,50),new Point(100,100));
         ///segment.setPrecision(2);
-        Item circle = new Circle(false,new Point(200,30),30);
+        ItemInterface circle = new Circle(false,new Point(200,30),30);
 
-        Item snowmanHead = new Circle(false, new Point(300,70),20);
-        Item snowmanBody = new Circle(false, new Point(290,110),30);
-        Item snowmanLegs = new Circle(false, new Point(280,170),40);
-        Item snowmanFace = new ComplexItem();
+        ItemInterface snowmanHead = new Circle(false, new Point(300,70),20);
+        ItemInterface snowmanBody = new BoundingBoxDecorator(new Circle(false, new Point(290,110),30));
+        ItemInterface snowmanLegs = new Circle(false, new Point(280,170),40);
+        ItemInterface snowmanFace = new ComplexItem();
         snowmanFace.setDeph(1000);
 
         Point[] mouthPoints = new Point[4];
@@ -21,11 +21,11 @@ public class Main {
         mouthPoints[1] = new Point(315,100);
         mouthPoints[2] = new Point(325,100);
         mouthPoints[3] = new Point(335,90);
-        Item snowmanMouthBezier = new Bezier(mouthPoints);
+        ItemInterface snowmanMouthBezier = new Bezier(mouthPoints);
         snowmanMouthBezier.setPrecision(0.01);
-        Item snowmanLeftEye = new Circle(false,new Point(305,75),5);
-        Item snowmanRightEye = new Circle(false, new Point(315,75),5);
-        Item snowmanNose = new Triangle(true, new Point(292,69), new Point(313,84), new Point(317,93));
+        ItemInterface snowmanLeftEye = new Circle(false,new Point(305,75),5);
+        ItemInterface snowmanRightEye = new Circle(false, new Point(315,75),5);
+        ItemInterface snowmanNose = new Triangle(true, new Point(292,69), new Point(313,84), new Point(317,93));
         snowmanNose.setCharToDraw('?');
         snowmanNose.setDeph(1000);
 
@@ -169,8 +169,8 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
         //animationTest();
-        //christmasCard();
+        christmasCard();
         //tetrahedronTest();
-        testDialogScene();
+        //testDialogScene();
     }
 }

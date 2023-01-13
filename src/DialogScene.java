@@ -32,7 +32,7 @@ public class DialogScene extends Scene{
         }
     }
     public void unhighlightAll(){
-        for(Item option: items){
+        for(ItemInterface option: items){
             ((DialogOption)option).setHighlighted(false);
         }
     }

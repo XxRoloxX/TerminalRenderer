@@ -2,13 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ComplexItem extends Item {
-    private ArrayList<Item> children;
+    private ArrayList<ItemInterface> children;
 
     public ComplexItem(){
         children = new ArrayList<>();
     }
 
-    public void addItem(Item newItem){
+    public void addItem(ItemInterface newItem){
         children.add(newItem);
     }
 
@@ -79,7 +79,7 @@ public class ComplexItem extends Item {
             children.get(i).draw();
         }
     }
-    public List<Item> getChildren(){
+    public List<ItemInterface> getChildren(){
         return children;
     }
 

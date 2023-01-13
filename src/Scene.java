@@ -7,7 +7,7 @@ public class Scene {
     private int height;
 
     private char[][] sceneField;
-    protected ArrayList<Item> items;
+    protected ArrayList<ItemInterface> items;
 
     public Scene(int width, int height){
         this.width=width;
@@ -23,11 +23,11 @@ public class Scene {
 
     }
 
-    public void addItem(Item newItem){
+    public void addItem(ItemInterface newItem){
         newItem.setScene(sceneField,height,width);
         items.add(newItem);
     }
-    public void removeItem(Item item){
+    public void removeItem(ItemInterface item){
         items.remove(item);
     }
 
@@ -57,8 +57,6 @@ public class Scene {
 
     public void draw(){
 
-        Collections.sort(items);
-
         for(int i=0;i<items.size();i++){
             items.get(i).draw();
         }
@@ -73,14 +71,14 @@ public class Scene {
         }
     }
     public void emptyScene(){
-        items = new ArrayList<Item>();
+        items = new ArrayList<>();
     }
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 
-    public Item getItem(int index){
+    public ItemInterface getItem(int index){
         if(index>=0 && index<items.size()){
             return items.get(index);
         }else{
