@@ -24,15 +24,15 @@ public class Main {
         snowmanMouthBezier.setPrecision(0.01);
         Item snowmanLeftEye = new Circle(false,new Point(305,75),5);
         Item snowmanRightEye = new Circle(false, new Point(315,75),5);
-        Item snowmanNose = Triangle.getInstance(true, new Point(292,69), new Point(313,84), new Point(317,93));
-        snowmanNose.setCharToDraw('?');
-        snowmanNose.setDeph(1000);
+        MixInSingleton snowmanNose = MixInSingleton.getInstance(true, new Point(292,69), new Point(313,84), new Point(317,93));
+        ((Triangle)snowmanNose).setCharToDraw('?');
+        ((Triangle)snowmanNose).setDeph(1000);
 
 
         ((ComplexItem)snowmanFace).addItem(snowmanMouthBezier);
         ((ComplexItem)snowmanFace).addItem(snowmanLeftEye);
         ((ComplexItem)snowmanFace).addItem(snowmanRightEye);
-        ((ComplexItem)snowmanFace).addItem(snowmanNose);
+        ((ComplexItem)snowmanFace).addItem((Triangle)snowmanNose);
 
         Item hatBase = new Rect(new Point(290,65),true,60,10);
         //Item hatBase = new Rect(snowmanHead.getPosition().getX())
@@ -45,8 +45,9 @@ public class Main {
 
         Item text = new TextItem(new Point(10,200),"Wesołych świat xdd", 20);
 
-        Item triangle = Triangle.getInstance(false, new Point(90,150), new Point(30,175),new Point(50,100));
-        triangle.setPrecision(0.01);
+        MixInSingleton triangle =MixInSingleton.getInstance(false, new Point(90,150), new Point(30,175),new Point(50,100));
+
+        ((Triangle)triangle).setPrecision(0.01);
     /*
         Item tri = new Triangle(false, new Point(40,40), new Point(100,200),new Point (300,450));
         tri.setPrecision(0.01);
@@ -59,7 +60,7 @@ public class Main {
         scene.addItem(snowmanLegs);
         scene.addItem(snowmanFace);
         scene.addItem(text);
-        scene.addItem(triangle);
+        scene.addItem((Triangle)triangle);
 
         scene.addItem(hatBase);
         scene.addItem(hatTop);
@@ -152,8 +153,8 @@ public class Main {
     }
     public static void main(String[] args) throws InterruptedException {
 
-        animationTest();
-        //christmasCard();
+        //animationTest();
+        christmasCard();
         //tetrahedronTest();
     }
 }

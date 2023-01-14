@@ -2,7 +2,7 @@ import jdk.jfr.Description;
 
 import java.util.ArrayList;
 
-public class Triangle extends Shape {
+public class Triangle extends Shape implements MixInSingleton {
 
     private Point p1;
     private Point p2;
@@ -26,7 +26,6 @@ public class Triangle extends Shape {
         this.position = points[0];
 
     }
-
     public static Triangle getInstance(boolean filled,Point p1, Point p2, Point p3){
 
         if(triangle==null){
@@ -39,7 +38,7 @@ public class Triangle extends Shape {
             triangle.filled = filled;
 
         }
-        return triangle;
+        return  triangle;
 
 
     }
