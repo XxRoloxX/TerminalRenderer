@@ -10,6 +10,8 @@ public class VideoToASCII implements Video {
     final static int DEFAULT_SLEEP_TIME=17;
     private ArrayList<ImageToASCII> frames;
 
+    private int threshold;
+
     //private ArrayList<Item>itemFrames;
 
     //private Scene scene;
@@ -28,6 +30,7 @@ public class VideoToASCII implements Video {
         sleepTime=DEFAULT_SLEEP_TIME;
         latestFrame = new ImageToASCII();
         position = new Point(0,0);
+        threshold = ImageToASCII.DEFAULT_THRESHOLD;
     }
 
     public void setPosition(Point position){
@@ -154,6 +157,7 @@ public class VideoToASCII implements Video {
             //System.out.println(opened);
             if(opened){
                 frames.get(i).setPosition(position);
+                frames.get(i).setThreshold(threshold);
                 frames.get(i).createASCII();
             }
             i++;
@@ -216,5 +220,9 @@ public class VideoToASCII implements Video {
            framesIterator = frames.iterator();
            return latestFrame;
        }
+    }
+
+    public void setThreshold(int threshold) {
+        this.threshold = threshold;
     }
 }

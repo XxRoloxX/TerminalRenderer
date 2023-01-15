@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageToASCII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VideoToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
     </list>
@@ -112,6 +113,7 @@
       <workItem from="1673605354569" duration="4978000" />
       <workItem from="1673626457960" duration="4561000" />
       <workItem from="1673649095939" duration="612000" />
+      <workItem from="1673815320127" duration="5180000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle">
       <created>1672048275059</created>

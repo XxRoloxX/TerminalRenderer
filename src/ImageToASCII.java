@@ -7,8 +7,12 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class ImageToASCII extends Item {
+
+    public static final int DEFAULT_THRESHOLD =  -7500000;
     private BufferedImage image;
     private InputStream fileHandler;
+
+    private int threshold;
 
     //String ASCIIImage;
 
@@ -21,12 +25,14 @@ public class ImageToASCII extends Item {
         width=0;
         height=0;
         fileHandler=null;
+        threshold= DEFAULT_THRESHOLD;
     }
     public ImageToASCII(){
         super();
         width=0;
         height=0;
         fileHandler=null;
+        threshold= DEFAULT_THRESHOLD;
     }
     public void copyASCIIImage(ImageToASCII other){
         ASCIIImage=other.ASCIIImage;
@@ -39,6 +45,7 @@ public class ImageToASCII extends Item {
         //sceneHeight = other.sceneHeight;
         //sceneField = other.sceneField;
         charToDraw = other.charToDraw;
+        threshold = other.threshold;
     }
 
     @Override
@@ -94,7 +101,7 @@ public class ImageToASCII extends Item {
 
         for(int i=0;i<height;i++){
             for(int j=0;j<width;j++){
-                ASCIIImage[i][j] = image.getRGB(j,i) <=  -7500000? ' ': '*';
+                ASCIIImage[i][j] = image.getRGB(j,i) <=  threshold? ' ': '*';
                 //-13005000
             }
         }
@@ -128,5 +135,7 @@ public class ImageToASCII extends Item {
         position.translate(o);
     }
 
-
+    public void setThreshold(int threshold) {
+        this.threshold = threshold;
+    }
 }
