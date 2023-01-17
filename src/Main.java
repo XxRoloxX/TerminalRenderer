@@ -173,17 +173,17 @@ public class Main {
         //scene.selectOption(1, true);
 
         InteractiveDialogScene interactiveScene = new InteractiveDialogScene(300,200);
-        interactiveScene.addOption(new TextItem(new Point(0,0),"Cube",17,300,40),
-                new Cube(false,new Point3D(150,50,100),50 ));
-        interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 2",17,300,40),
-                new Tetrahedron(false,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ) );
-        interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 3",17,300,40),
-                new Tetrahedron(false,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ));
+        interactiveScene.addOption(new TextItem(new Point(0,0),"Filled Cube",17,300,40),
+                new Cube(true,new Point3D(300,50,100),50 ));
+        interactiveScene.addOption(new TextItem(new Point(0,0),"Filled Tetrahedron",17,300,40),
+                new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ) );
+        interactiveScene.addOption(new TextItem(new Point(0,0),"Empty Tetrahedron",17,300,40),
+                new Tetrahedron(false,new Point3D(250,50,100), new Point3D(250,150,100), new Point3D(150,100,100), new Point3D(200,100,50) ));
 
        /* interactiveScene.addOption(new TextItem(new Point(0,0),"Tetrahedron 4",17,300,40),
                 new Tetrahedron(true,new Point3D(150,50,100), new Point3D(150,150,100), new Point3D(50,100,100), new Point3D(100,100,50) ) );
         */
-        AnimatedScene animatedScene = new AnimatedScene(400,400);
+        AnimatedScene animatedScene = new AnimatedScene(600,330);
         animatedScene.setFrameRate(30);
 
         VideoToASCII videoBackground = new VideoToASCII();
@@ -192,19 +192,38 @@ public class Main {
        // videoBackground.setThreshold(-9200000); pooh, golden twerk ratio
        // videoBackground.setThreshold(-6200000); shaggy and carl macarena
 
-        videoBackground.setThreshold(-8200000);
+        videoBackground.setThreshold((-9100000));
         //videoBackground.loadVideo("~/Videos/simplescreenrecorder-2023-01-10_21.49.40.mp4");
-        videoBackground.loadVideo("~/Videos/censored.mp4");
+        videoBackground.loadVideo("~/Repos/TerminalRenderer/TestVideos/censored.mp4");
         animatedScene.addVideo(videoBackground);
 
         VideoToASCII videoBackground2 = new VideoToASCII();
         videoBackground2.setThreshold(-13200000);
-        videoBackground2.setPosition(new Point(0,200));
-        videoBackground2.loadVideo("~/Videos/goose.mp4");
-
-        animatedScene.addVideo(videoBackground2);
+        videoBackground2.setPosition(new Point(300,150));
+        videoBackground2.loadVideo("~/Repos/TerminalRenderer/TestVideos/goose.mp4");
 
 
+
+	VideoToASCII videoBackground3 = new VideoToASCII();
+ 
+        videoBackground3.setThreshold((-9200000));
+        videoBackground3.setPosition(new Point(-50,200));
+        videoBackground3.loadVideo("~/Repos/TerminalRenderer/TestVideos/amogus.mp4");
+
+ 
+	VideoToASCII videoBackground4 = new VideoToASCII();
+ 
+        videoBackground4.setThreshold((-9200000));
+        videoBackground4.setPosition(new Point(300,-30));
+        videoBackground4.loadVideo("~/Repos/TerminalRenderer/TestVideos/querkyAnimatronics.mp4");
+
+      
+	
+	
+	animatedScene.addVideo(videoBackground4);
+	animatedScene.addVideo(videoBackground3);
+
+	animatedScene.addVideo(videoBackground2);
 
         interactiveScene.runScene();
         ArrayList<ItemInterface>itemsFromDialogScene = interactiveScene.getItems();
@@ -224,10 +243,13 @@ public class Main {
         SolidRotation rotation;
         SolidTranslation translation;
 
+	
+
         for(ObjectAnimation complexAnimation: itemRotations){
+
             rotation =new SolidRotation((SolidInterface)complexAnimation.getItemToAnimate(),10);
-            translation = new SolidTranslation(new Point(rand.nextInt(0,3)-1,rand.nextInt(0,3)-1),(SolidInterface)complexAnimation.getItemToAnimate(),10);
-            rotation.setRotationAngles(rand.nextDouble(0,0.2),rand.nextDouble(0,0.2),rand.nextDouble(0,0.2));
+            translation = new SolidTranslation(new Point(rand.nextInt(1)-1,rand.nextInt(1)-1),(SolidInterface)complexAnimation.getItemToAnimate(),10);
+            rotation.setRotationAngles(rand.nextDouble()/10,rand.nextDouble()/10,rand.nextDouble()/10);
             ((ComplexAnimation)complexAnimation).addAnimation(rotation);
             ((ComplexAnimation)complexAnimation).addAnimation(translation);
             animatedScene.addVideo(complexAnimation);
