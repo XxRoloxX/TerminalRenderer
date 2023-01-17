@@ -43,14 +43,16 @@ public class Point3D extends Point {
         //z*=(factor);
 
     }
+
+    /*
     public void rotateZ(double angle){
         double previousRadius = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
         double newRadius;
         double factor;
-        /*
-        z = z*Math.cos(angle)-y*Math.sin(angle);
-        y = y*Math.cos(angle) + z*Math.sin(angle);
-         */
+
+       // z = z*Math.cos(angle)-y*Math.sin(angle);
+       // y = y*Math.cos(angle) + z*Math.sin(angle);
+
         double oldX = x;
 
         x = x*Math.cos(angle) - y*Math.sin(angle);
@@ -60,9 +62,13 @@ public class Point3D extends Point {
 
         factor = previousRadius/newRadius;
 
-       // y*=(factor);
+       //y*=(factor);
         //x*=(factor);
     }
+    */
+
+
+
     public void rotateX(double angle){
         double previousRadius = Math.sqrt(Math.pow(z,2)+Math.pow(y,2));
         double newRadius;

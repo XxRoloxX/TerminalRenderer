@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="887f95a3-7300-4ed0-8c1d-b2b3c206b205" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ImageToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageToASCII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point3D.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,11 @@
       <workItem from="1673605354569" duration="4978000" />
       <workItem from="1673626457960" duration="4561000" />
       <workItem from="1673649095939" duration="612000" />
-      <workItem from="1673815320127" duration="5180000" />
+      <workItem from="1673815320127" duration="5327000" />
+      <workItem from="1673892093404" duration="52000" />
+      <workItem from="1673892907644" duration="2189000" />
+      <workItem from="1673984955871" duration="1075000" />
+      <workItem from="1673986170331" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="Triangle">
       <created>1672048275059</created>
@@ -185,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673647754847</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added golden twerk ratio">
+      <created>1673820568092</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673820568092</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +236,8 @@
     <MESSAGE value="Applied Decorator Design Pattern to Item via ItemInterface" />
     <MESSAGE value="Applied Decorator Design Pattern to Solid via SolidInterface" />
     <MESSAGE value="Finished InteractiveDialogScene interaction with AnimatedScene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished InteractiveDialogScene interaction with AnimatedScene" />
+    <MESSAGE value="Added golden twerk ratio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added golden twerk ratio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

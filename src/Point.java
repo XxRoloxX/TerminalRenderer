@@ -95,6 +95,26 @@ public class Point implements Comparable<Point>{
 
 
     }
+    public void rotateZ(double angle){
+        double previousRadius = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+        double newRadius;
+        double factor;
+        /*
+        z = z*Math.cos(angle)-y*Math.sin(angle);
+        y = y*Math.cos(angle) + z*Math.sin(angle);
+         */
+        double oldX = x;
+
+        x = x*Math.cos(angle) - y*Math.sin(angle);
+        y = oldX*Math.sin(angle) + y*Math.cos(angle);
+
+        newRadius = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+
+        factor = previousRadius/newRadius;
+
+        // y*=(factor);
+        //x*=(factor);
+    }
     public String toString(){
         return "("+x+","+y+")";
     }
